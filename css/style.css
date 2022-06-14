@@ -127,7 +127,8 @@ img {
 .site-navigation {
     display: flex;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .site-navigation__item a {
@@ -327,6 +328,7 @@ img {
     width: 1200px;
     display: flex;
     justify-content: space-between;
+    padding: 0 20px;
     padding-bottom: 43px;
     border-bottom: 2px solid var(--basic-lightgray);
 }
