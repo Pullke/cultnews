@@ -1,0 +1,397 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Light.woff2) format("woff2"),
+      url("../fonts/OpenSans-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Regular.woff2) format("woff2"),
+      url("../fonts/OpenSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-Bold.woff2) format("woff2"),
+      url("../fonts/OpenSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Yeseva One";
+    src: url(../fonts/YesevaOne-Regular.woff2) format("woff2"),
+      url("../fonts/YesevaOne-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Variables */
+
+:root {
+    --basic-white: #ffffff;
+    --basic-black: #000000;
+    --basic-gray: #575757;
+    --basic-hover: #FF7931;
+    --basic-active: rgba(255, 121, 49, 0.5);
+    --basic-lightgray: #F7F7F7;
+}
+
+/* Global */
+
+.page {
+    height: 100%;
+}
+
+.page-body {
+    /* min-width: 1200px; */
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+
+    min-height: 100%;
+    display: grid;
+    grid-template-rows:
+      min-content
+      1fr
+      min-content;
+}
+
+a {
+    color: var(--basic-black);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: var(--basic-hover);
+}
+
+a:active {
+    color: var(--basic-active);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+  }
+
+ .container {
+    width: 1200px;
+    margin: auto;
+}
+
+  /* Header */
+
+.main-header {
+    width: 1200px;
+    margin: auto;
+    padding: 66px 0 46px;
+}
+
+.main-header__logo {
+    display: block;
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.site-navigation {
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+
+.site-navigation__item a {
+    letter-spacing: 2px;
+}
+
+/* Headline */
+
+.headline {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    height: 464px;
+    background-image: url(../img/underwater-hotel_squoosh.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 44px;
+}
+
+.headline__title {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-top: 161px;
+}
+
+.headline__title::before {
+    position: absolute;
+    content: "";
+    width: 55px;
+    height: 55px;
+    background-image: url(../img/icons/headline_icon.svg);
+    margin-top: -115px;
+    border-radius: 50%;
+}
+
+.headline__title a {
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 300;
+    color: var(--basic-white);
+}
+
+.headline__text {
+    width: 500px;
+    align-self: end;
+    justify-self: center;
+    margin: 0;
+    margin-bottom: 47px;
+    text-align: center;
+    color: var(--basic-white);
+}
+
+/* Reviews */
+
+.reviews {
+    margin-bottom: 55px;
+}
+
+.rewiew__title {
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+
+.reviews__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviews__item {
+    width: 371px;
+}
+
+.rewiew__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__title {
+    font-family: "Yeseva One";
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 13px;
+}
+
+.card__link {
+    text-transform: none;
+}
+
+.rewiew__card img {
+    order: -1;
+    margin-bottom: 25px;
+}
+
+.card__text {
+    margin: 0;
+}
+
+.promo {
+    margin-bottom: 55px;
+    background-color: var(--basic-lightgray);
+}
+
+.promo_container {
+    min-height: 500px;
+    padding-bottom: 50px;
+    text-align: center;
+    background-image: url(../img/circle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.promo__title {
+    margin-bottom: 45px;
+    padding-top: 32px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.promo__list {
+    width: 380px;
+    margin: auto;
+}
+
+.promo__item {
+    border-bottom: 2px solid var(--basic-lightgray);
+    margin-bottom: 30px;
+}
+
+.promo__item:last-child {
+    border: none;
+    margin-bottom: 60px;
+}
+
+.promo__item h3 {
+    font-family: "Yeseva One";
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.promo__item p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.promo__button {
+    position: relative;
+    color: var(--basic-white);
+    background-color: var(--basic-hover);
+    padding: 15px 50px 15px 35px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.promo__button:hover {
+    color: var(--basic-white);
+    /* border: 2px solid var(--basic-hover); */
+}
+
+.promo__button::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 20px;
+    padding-left: 20px;
+    background-image: url(../img/icons/arrow_right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.promo__button:hover::after {
+    background-image: url(../img/icons/arrow_right.svg);
+    margin-left: 5px;
+}
+
+.main-footer {
+    background-color: var(--basic-gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 55px;
+}
+
+.main-footer__logo {
+    margin-bottom: 25px;
+}
+
+.footer-navigation {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 43px;
+    border-bottom: 2px solid var(--basic-lightgray);
+}
+
+.footer-navigation__item a {
+    color: var(--basic-white);
+    letter-spacing: 2px;
+}
+
+.footer-navigation__item a:hover {
+    color: var(--basic-hover);
+}
+
+.footer-social__list {
+    display: flex;
+    margin-top: 30px;
+}
+
+.footer-social__item {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;
+}
+
+.footer-social__item:last-child {
+    margin-right: 0;
+}
+
+.footer-social__item--link  {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--basic-white);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.footer-social__item--link:hover {
+    background-color: var(--basic-gray);
+    border: 2px solid var(--basic-white);
+    box-sizing: border-box;
+}
+
+.footer-social__item--instagram {
+    background-image: url(../img/icons/insta_icon.svg);
+}
+
+.footer-social__item--instagram:hover {
+    background-image: url(../img/icons/insta_icon-white.svg);
+}
+
+.footer-social__item--facebook {
+    background-image: url(../img/icons/fb_icon.svg);
+}
+
+.footer-social__item--facebook:hover {
+    background-image: url(../img/icons/fb_icon-white.svg);
+}
+
+.footer-social__item--twitter {
+    background-image: url(../img/icons/tw_icon.svg);
+}
+
+.footer-social__item--twitter:hover {
+    background-image: url(../img/icons/tw_icon-white.svg);
+}
